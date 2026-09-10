@@ -72,31 +72,72 @@ p {
     background-size: cover;[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)
     background-position: center center;[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
     background-repeat: no-repeat;[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
+/* ==========================================
+   DEFAULT / DESKTOP STYLES
+   (Applies to computers and default view)
+   ========================================== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff; 
+}
 
-    /* Keeps background fixed in place while scrolling */
-    background-attachment: fixed;[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)
+/* Navigation Bar Layout & Alignment */
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
 
-    /* Matching fallback background color */
-    background-color: #e4ebe0;[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)
+nav a {
+  text-decoration: none;
+  color: #2e4d25;
+  font-weight: bold;
+}
 
-    /* Reduced base text size on mobile screens */
-    font-size: 14px;
+/* Navbar Logo Styling */
+.site-logo {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
+
+/* Content Container */
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+/* ==========================================
+   MOBILE / PHONE STYLES
+   (Applies ONLY on screens <= 768px wide)
+   ========================================== */
+@media screen and (max-width: 768px) {
+  
+  body {
+    /* Mobile-specific background image */
+    background-image: url('chitla.png');[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)[span_6](start_span)[span_6](end_span)
+
+    /* Fills full phone screen cleanly without repeating */
+    background-size: cover;[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)
+    background-position: center center;[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)[span_12](start_span)[span_12](end_span)
+    background-repeat: no-repeat;[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)[span_15](start_span)[span_15](end_span)
+
+    /* Background remains fixed in place while page content scrolls */
+    background-attachment: fixed;[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)[span_18](start_span)[span_18](end_span)
+
+    /* Matching sage green fallback background color */
+    background-color: #e4ebe0;[span_19](start_span)[span_19](end_span)[span_20](start_span)[span_20](end_span)[span_21](start_span)[span_21](end_span)
   }
 
-  /* Smaller navigation links on mobile screens */
-  nav a {
-    font-size: 11px;[span_18](start_span)[span_18](end_span)
-  }
-
-  /* Smaller headings on mobile screens */
-  h1 {
-    font-size: 24px;
-  }
-
-  /* Smaller paragraph text on mobile screens */
-  p {
-    font-size: 14px;
-  }
 </style>
 
 </body>
