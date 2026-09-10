@@ -1,42 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <!-- Required for responsive layout on phone screens -->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  color: #333333;
+  background-color: #ffffff; 
+}
 
-  <title>NADFI - Nature and Animal Development Federation Industries</title>
+/* Navigation Bar Layout */
+nav {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 12px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap; /* Helps links wrap neatly on narrow phone screens */
+}
 
-  <!-- Google Search Console verification meta tag -->
-  <meta name="google-site-verification" content="YOUR_VERIFICATION_CODE_HERE" />
+/* Navigation Link Styling - Reduced Font Size */
+nav a {
+  text-decoration: none;
+  color: #2e4d25;
+  font-weight: bold;
+  font-size: 13px; /* Reduced navigation font size */
+}
 
-  <!-- Favicon / Search result logo -->
-  <link rel="icon" type="image/png" href="Logo.png">
+.site-logo {
+  height: 32px; /* Proportionally resized logo to match smaller font */
+  width: auto;
+  vertical-align: middle;
+  border-radius: 5px;
+}
 
-  <!-- External Stylesheet (style.css) -->
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+.content {
+  padding: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
 
-  <!-- Navigation Bar with Logo -->
-  <nav>
-    <a href="index.html">
-      <img src="Logo.png" alt="NADFI Logo" class="site-logo">
-    </a>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="account.html">Account</a>
-    <a href="decisions.html">Decisions</a>
-    <a href="fridaynews.html">Friday News</a>
-    <a href="goals.html">Goals</a>
-    <a href="project1.html">Project 1</a>
-  </nav>
+/* ==========================================
+   MOBILE STYLES (PORTRAIT & LANDSCAPE)
+   ========================================== */
+/* Triggers on screens up to 1024px width OR mobile device orientation */
+@media screen and (max-width: 1024px), screen and (orientation: portrait), screen and (orientation: landscape) and (max-height: 500px) {
+  body {
+    /* Mobile background image */
+    background-image: url('Histo.png'); 
 
-  <!-- Main Content Area -->
-  <div class="content">
-    <h1>Welcome to NADFI</h1>
-    <p>This page displays your default desktop styling on computers, while automatically applying Histo.png as the fixed background on mobile phones via style.css.</p>
-  </div>
+    /* Fills full phone screen in both portrait and landscape */
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    /* Fallback background color */
+    background-color: #f2f5ed; 
+  }
+
+  /* Optional: Further reduce nav font size slightly on smaller portrait phone screens */
+  nav a {
+    font-size: 12px;
+  }
+}
+</style>
 
 </body>
 </html>
