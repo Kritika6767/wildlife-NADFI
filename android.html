@@ -15,26 +15,28 @@ body {
   font-size: 16px;
 }
 
-/* Navigation Bar Alignment & Styling */
+/* Navigation Bar Layout */
 nav {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 17px;
+  padding: 10px 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 8px;
+  gap: 10px;
+  flex-wrap: wrap; /* Allows links to flow cleanly on narrow screens */
 }
 
+/* Navigation Link Styling - Smaller Font Size */
 nav a {
   text-decoration: none;
   color: #2e4d25;
   font-weight: bold;
-  font-size: 6px;
+  font-size: 13px; /* Smaller navigation link size */
 }
 
 /* Navbar Logo Styling */
 .site-logo {
-  height: 40px;
+  height: 32px; /* Resized to match smaller navigation font */
   width: auto;
   vertical-align: middle;
   border-radius: 5px;
@@ -57,48 +59,44 @@ p {
 
 
 /* ==========================================
-   MOBILE / PHONE STYLES
-   (Applies ONLY on screens <= 768px wide)
+   MOBILE & PHONE STYLES (PORTRAIT & LANDSCAPE)
+   (Applies ONLY on phone/tablet screens)
    ========================================== */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1024px), screen and (orientation: portrait), screen and (orientation: landscape) and (max-height: 500px) {
   
   body {
-    /* Sets image background on mobile */
-    background-image: url('histo.png');[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)
+    /* Set background image for mobile devices */
+    background-image: url('histo.png');[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)[span_2](start_span)[span_2](end_span)
 
-    /* Fills full phone screen cleanly without repeating */
-    background-size: cover;[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)
-    background-position: center center;[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)
-    background-repeat: no-repeat;[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)
+    /* Fills full phone screen in both portrait and landscape */
+    background-size: cover;[span_3](start_span)[span_3](end_span)[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)
+    background-position: center center;[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)[span_8](start_span)[span_8](end_span)
+    background-repeat: no-repeat;[span_9](start_span)[span_9](end_span)[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
 
-    /* Keeps background fixed while page scrolls */
-    background-attachment: fixed;[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)
+    /* Keeps background fixed in place while scrolling */
+    background-attachment: fixed;[span_12](start_span)[span_12](end_span)[span_13](start_span)[span_13](end_span)[span_14](start_span)[span_14](end_span)
 
-    /* Matching sage green fallback color */
-    background-color: #e4ebe0;[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
+    /* Matching fallback background color */
+    background-color: #e4ebe0;[span_15](start_span)[span_15](end_span)[span_16](start_span)[span_16](end_span)[span_17](start_span)[span_17](end_span)
 
-    /* Mobile font size */
+    /* Reduced base text size on mobile screens */
     font-size: 14px;
   }
 
-  /* Adjust navigation link font size for mobile screens */
+  /* Smaller navigation links on mobile screens */
   nav a {
-    font-size: 12px;
+    font-size: 11px;[span_18](start_span)[span_18](end_span)
   }
 
-  /* Adjust page headings for smaller screens */
+  /* Smaller headings on mobile screens */
   h1 {
     font-size: 24px;
   }
 
-  /* Adjust paragraph text size */
+  /* Smaller paragraph text on mobile screens */
   p {
     font-size: 14px;
   }
-
-}
-
-  
 </style>
 
 </body>
