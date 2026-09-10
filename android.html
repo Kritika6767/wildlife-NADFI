@@ -4,6 +4,7 @@
 <style>
 /* ==========================================
    DEFAULT / DESKTOP STYLES
+   (Applies to computers and large screens)
    ========================================== */
 body {
   margin: 0;
@@ -11,64 +12,92 @@ body {
   font-family: Arial, sans-serif;
   color: #333333;
   background-color: #ffffff; 
+  font-size: 16px;
 }
 
-/* Navigation Bar Layout */
+/* Navigation Bar Alignment & Styling */
 nav {
   background-color: rgba(255, 255, 255, 0.9);
-  padding: 12px 10px;
+  padding: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap; /* Helps links wrap neatly on narrow phone screens */
+  gap: 15px;
 }
 
-/* Navigation Link Styling - Reduced Font Size */
 nav a {
   text-decoration: none;
   color: #2e4d25;
   font-weight: bold;
-  font-size: 13px; /* Reduced navigation font size */
+  font-size: 16px;
 }
 
+/* Navbar Logo Styling */
 .site-logo {
-  height: 32px; /* Proportionally resized logo to match smaller font */
+  height: 40px;
   width: auto;
   vertical-align: middle;
   border-radius: 5px;
 }
 
+/* Content Container */
 .content {
   padding: 20px;
   max-width: 800px;
   margin: 0 auto;
 }
 
+h1 {
+  font-size: 32px;
+}
+
+p {
+  font-size: 16px;
+}
+
+
 /* ==========================================
-   MOBILE STYLES (PORTRAIT & LANDSCAPE)
+   MOBILE / PHONE STYLES
+   (Applies ONLY on screens <= 768px wide)
    ========================================== */
-/* Triggers on screens up to 1024px width OR mobile device orientation */
-@media screen and (max-width: 1024px), screen and (orientation: portrait), screen and (orientation: landscape) and (max-height: 500px) {
+@media screen and (max-width: 768px) {
+  
   body {
-    /* Mobile background image */
-    background-image: url('Histo.png'); 
+    /* Sets image background on mobile */
+    background-image: url('histo.png');[span_0](start_span)[span_0](end_span)[span_1](start_span)[span_1](end_span)
 
-    /* Fills full phone screen in both portrait and landscape */
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+    /* Fills full phone screen cleanly without repeating */
+    background-size: cover;[span_2](start_span)[span_2](end_span)[span_3](start_span)[span_3](end_span)
+    background-position: center center;[span_4](start_span)[span_4](end_span)[span_5](start_span)[span_5](end_span)
+    background-repeat: no-repeat;[span_6](start_span)[span_6](end_span)[span_7](start_span)[span_7](end_span)
 
-    /* Fallback background color */
-    background-color: #f2f5ed; 
+    /* Keeps background fixed while page scrolls */
+    background-attachment: fixed;[span_8](start_span)[span_8](end_span)[span_9](start_span)[span_9](end_span)
+
+    /* Matching sage green fallback color */
+    background-color: #e4ebe0;[span_10](start_span)[span_10](end_span)[span_11](start_span)[span_11](end_span)
+
+    /* Mobile font size */
+    font-size: 14px;
   }
 
-  /* Optional: Further reduce nav font size slightly on smaller portrait phone screens */
+  /* Adjust navigation link font size for mobile screens */
   nav a {
     font-size: 12px;
   }
+
+  /* Adjust page headings for smaller screens */
+  h1 {
+    font-size: 24px;
+  }
+
+  /* Adjust paragraph text size */
+  p {
+    font-size: 14px;
+  }
+
 }
+
   
 </style>
 
