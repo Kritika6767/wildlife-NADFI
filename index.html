@@ -172,12 +172,22 @@
       <img src="Logo.png" alt="NADFI Logo" class="site-logo">
     </a>
   </div>
+<!-- Hidden Toggle Control for Mobile Menu -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-  <!-- Mobile Slide-Out Side Drawer -->
+  <!-- Mobile Header Bar (Visible only on phone) -->
+  <div class="mobile-header">
+    <label for="nav-toggle" class="hamburger-btn">&#9776;</label>
+    <a href="index.html">
+      <img src="Logo.png" alt="Logo" class="site-logo">
+    </a>
+  </div>
+
+  <!-- Mobile Side Navigation Drawer (Visible only on phone when toggled) -->
   <div class="side-nav">
     <label for="nav-toggle" class="close-btn">&times;</label>
     <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
+    <a href="about.html">About</a>
     <a href="account.html">Account</a>
     <a href="decisions.html">Decisions</a>
     <a href="fridaynews.html">Friday News</a>
@@ -185,9 +195,8 @@
     <a href="project1.html">Project 1</a>
   </div>
 
-  <!-- Background Overlay for Mobile Menu -->
+  <!-- Background Dimming Overlay for Mobile Drawer -->
   <label for="nav-toggle" class="sidebar-overlay"></label>
-
   <!-- Desktop Navigation Bar -->
   <nav class="desktop-nav">
     <a href="index.html">
