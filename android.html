@@ -1,5 +1,5 @@
 /* ==========================================
-   1. GLOBAL / DESKTOP STYLES
+   1. GLOBAL & DESKTOP STYLES
    ========================================== */
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   font-size: 16px;
 }
 
-/* Desktop Navigation Bar */
+/* Desktop Horizontal Top Navigation */
 nav.desktop-nav {
   background-color: #ffffff;
   padding: 12px 20px;
@@ -38,7 +38,7 @@ nav.desktop-nav a {
   vertical-align: middle;
 }
 
-/* Hide Mobile Drawer Elements on Desktop */
+/* Hide mobile-specific elements on desktop */
 .mobile-header,
 .side-nav,
 .nav-toggle,
@@ -46,19 +46,10 @@ nav.desktop-nav a {
   display: none !important;
 }
 
-/* Page Content Layout */
 .content {
   padding: 20px;
   max-width: 900px;
   margin: 0 auto;
-}
-
-.main-banner {
-  width: 100%;
-  max-height: 400px;
-  object-fit: cover;
-  border-radius: 8px;
-  margin: 15px 0;
 }
 
 /* ==========================================
@@ -68,7 +59,7 @@ nav.desktop-nav a {
 
   /* Mobile Background & Larger Typography */
   body {
-    background-image: url('1000324286.jpg'); /* Ensure this exact filename is uploaded on GitHub */
+    background-image: url('1000324286.jpg'); /* Your mobile background image */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
@@ -78,12 +69,12 @@ nav.desktop-nav a {
     line-height: 1.6;
   }
 
-  /* Hide Desktop Top Navigation on Phone */
+  /* Hide Desktop Top Nav on Phone */
   nav.desktop-nav {
     display: none !important;
   }
 
-  /* Mobile Top Sticky Bar */
+  /* Mobile Sticky Header Bar with Three Dots Button */
   .mobile-header {
     display: flex !important;
     align-items: center;
@@ -97,25 +88,28 @@ nav.desktop-nav a {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
   }
 
-  .hamburger-btn {
-    font-size: 26px;
+  /* Three Dots Icon Styling */
+  .three-dots-btn {
+    font-size: 28px;
+    font-weight: bold;
     cursor: pointer;
     color: #1d2a44;
     user-select: none;
     line-height: 1;
+    padding: 0 5px;
   }
 
-  /* Hide the Checkbox Input Completely */
+  /* Hide Checkbox Toggle Completely */
   input.nav-toggle {
     display: none !important;
   }
 
-  /* Mobile Side Navigation Drawer */
+  /* Slide-Out Side Navigation Drawer */
   .side-nav {
     display: flex !important;
     position: fixed;
     top: 0;
-    left: -280px; /* Moves drawer off-screen */
+    left: -280px; /* Hidden off-screen by default */
     width: 260px;
     height: 100vh;
     background-color: #ffffff;
@@ -157,7 +151,7 @@ nav.desktop-nav a {
     z-index: 1000;
   }
 
-  /* Toggle Drawer Open when Hamburger Clicked */
+  /* Slide Navigation Drawer In when Three-Dots Button is Clicked */
   .nav-toggle:checked ~ .side-nav {
     left: 0 !important;
   }
